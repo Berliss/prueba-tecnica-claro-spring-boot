@@ -2,17 +2,20 @@ package com.bersoft.crudapplication.repository;
 
 import com.bersoft.crudapplication.model.domain.Employee;
 import com.bersoft.crudapplication.model.exception.MyEmployeeNotFoundException;
-import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
 @Repository
-@AllArgsConstructor
 public class EmployeeRepository {
 
     private final Map<Long, Employee> employeesDatasource;
     private Long sequence;
+
+    public EmployeeRepository(Map<Long,Employee> employeesDatasource){
+        this.employeesDatasource = employeesDatasource;
+        sequence = employeesDatasource.keySet().stream().max(Long::compareTo).orElse(0L);
+    }
 
     public EmployeeRepository() {
         this.employeesDatasource = new HashMap<>();
