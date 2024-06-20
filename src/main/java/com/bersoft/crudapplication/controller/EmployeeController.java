@@ -19,13 +19,13 @@ public class EmployeeController {
     private EmployeeService service;
 
     @GET
-    public Response findById() {
+    public Response findAll() {
         return Response.status(Response.Status.OK).entity(service.findAll()).build();
     }
 
     @GET
     @Path("/{id}")
-    public Response findAll(@PathParam("id") long id) {
+    public Response findById(@PathParam("id") long id) {
         return Response.status(Response.Status.OK).entity(service.findById(id)).build();
     }
 
