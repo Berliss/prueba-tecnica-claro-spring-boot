@@ -47,4 +47,16 @@ public class EmployeeController {
         return Response.noContent().build();
     }
 
+    @GET
+    @Path("/{id}/gender")
+    public Response getGender(@PathParam("id") long id) {
+        return Response.status(Response.Status.OK).entity(service.getGender(id)).build();
+    }
+
+    @GET
+    @Path("/{id}/salary")
+    public Response getSalary(@PathParam("id") long id) {
+        return Response.status(Response.Status.OK).entity(service.getSalary(id)).build();
+    }
+
 }
