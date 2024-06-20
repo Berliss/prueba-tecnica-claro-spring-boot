@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.bersoft</groupId>
-    <artifactId>prueba-tecnica-claro-spring-boot</artifactId>
+    <artifactId>crud-application</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>prueba-tecnica-claro-spring-boot</name>
+    <name>crud-application</name>
     <description>prueba-tecnica-claro-spring-boot</description>
     <properties>
         <java.version>21</java.version>
