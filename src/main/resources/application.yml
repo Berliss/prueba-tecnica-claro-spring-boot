@@ -1,1 +1,3 @@
-
+test:
+  integration:
+    enable: ${INTEGRATION_TEST:true}
