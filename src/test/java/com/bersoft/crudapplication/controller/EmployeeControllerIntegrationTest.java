@@ -9,13 +9,13 @@ import jakarta.ws.rs.client.Entity;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import org.junit.jupiter.api.Test;
-import org.springframework.test.context.junit.jupiter.EnabledIf;
+import org.junit.jupiter.api.condition.EnabledIfEnvironmentVariable;
 
 
 import static org.junit.jupiter.api.Assertions.*;
 
 
-@EnabledIf("${integration.test.enable:false}")
+@EnabledIfEnvironmentVariable(named = "INTEGRATION_TEST", matches = "true")
 class EmployeeControllerIntegrationTest {
 
     private static final Client client = ClientBuilder.newClient();
