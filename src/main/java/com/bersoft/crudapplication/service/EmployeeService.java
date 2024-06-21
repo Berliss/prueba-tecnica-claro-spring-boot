@@ -45,8 +45,8 @@ public class EmployeeService {
     }
 
     public boolean delete(Long id) {
-        Employee e = employeeRepository.findById(id).orElseThrow(() -> new MyEmployeeNotFoundException(id));
-        return employeeRepository.delete(e.getId());
+        Employee employee = employeeRepository.findById(id).orElseThrow(() -> new MyEmployeeNotFoundException(id));
+        return employeeRepository.delete(employee.getId());
     }
 
     public Map<String, Object> getGender(Long id) {
