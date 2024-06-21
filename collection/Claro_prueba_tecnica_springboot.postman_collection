@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "c57c4a8c-c057-489e-ae8d-942d079e8fab",
+		"name": "(01) - Claro prueba tecnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22252085"
+	},
+	"item": [
+		{
+			"name": "CRUD",
+			"item": [
+				{
+					"name": "Obtener todos los empleados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/claro/employees",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"claro",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener empleado by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/claro/employees/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"claro",
+								"employees",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear empleado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n  \"name\": \"berlis\",\r\n  \"lastname\": \"rodriguez\",\r\n  \"address\": \"nagua\",\r\n  \"age\": 18,\r\n  \"salary\": 3900,\r\n  \"dni\": \"345345353\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/claro/employees",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"claro",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar empleado",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n  \"name\": \"berlis 23\",\r\n  \"lastname\": \"rodriguez\",\r\n  \"address\": \"nagua\",\r\n  \"age\": 18,\r\n  \"salary\": 3900,\r\n  \"dni\": \"345345353\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/claro/employees/5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"claro",
+								"employees",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar empleado",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n  \"name\": \"berlis 23\",\r\n  \"lastname\": \"rodriguez\",\r\n  \"address\": \"nagua\",\r\n  \"age\": 18,\r\n  \"salary\": 3900,\r\n  \"dni\": \"345345353\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/claro/employees/5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"claro",
+								"employees",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Integracion Soap",
+			"item": [
+				{
+					"name": "Obtener salario del empleado en palabras",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/claro/employees/1/salary",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"claro",
+								"employees",
+								"1",
+								"salary"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Integracion Rest",
+			"item": [
+				{
+					"name": "Obtener el genero del empleado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/claro/employees/1/gender",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"claro",
+								"employees",
+								"1",
+								"gender"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:8080/demo-berlis",
+			"type": "string"
+		}
+	]
+}
