@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class EmployeeController {
 
-    private EmployeeService service;
+    private final EmployeeService service;
 
     @GET
     public Response findAll() {
