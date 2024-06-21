@@ -30,3 +30,27 @@ https://www.baeldung.com/jersey-bean-validation
 https://www.baeldung.com/jax-rs-response
 
 https://medium.com/@theopendle/creating-a-jersey-api-with-spring-boot-87a1af0512e5
+
+### Configuracion de plugin para generar clases de cliente SOAP
+
+```xml
+<plugin>
+    <groupId>com.sun.xml.ws</groupId>
+    <artifactId>jaxws-maven-plugin</artifactId>
+    <version>4.0.2</version>
+    <executions>
+        <execution>
+            <goals>
+                <goal>wsimport</goal>
+            </goals>
+            <configuration>
+                <wsdlUrls>
+                    <wsdlUrl>https://www.dataaccess.com/webservicesserver/NumberConversion.wso?WSDL</wsdlUrl>
+                </wsdlUrls>
+                <packageName>com.bersoft.crudapplication.client.soap.generated</packageName>
+                <sourceDestDir>${project.basedir}/src/main/java</sourceDestDir>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
+```
