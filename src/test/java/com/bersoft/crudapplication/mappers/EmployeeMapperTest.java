@@ -14,7 +14,7 @@ class EmployeeMapperTest {
     @Test
     void toEmployeeResponse(){
         //given
-        Employee employee = TestUtil.getEmployee();
+        Employee employee = TestUtil.getEmployeeWithId();
         //when
         EmployeeResponse employeeResponse = EmployeeMapper.toEmployeeResponse(employee);
         //then
