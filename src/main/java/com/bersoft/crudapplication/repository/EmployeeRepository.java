@@ -12,7 +12,7 @@ public class EmployeeRepository {
     private final Map<Long, Employee> employeesDatasource;
     private Long sequence;
 
-    public EmployeeRepository(Map<Long,Employee> employeesDatasource){
+    public EmployeeRepository(Map<Long, Employee> employeesDatasource) {
         this.employeesDatasource = employeesDatasource;
         sequence = employeesDatasource.keySet().stream().max(Long::compareTo).orElse(0L);
     }
@@ -51,7 +51,6 @@ public class EmployeeRepository {
     }
 
     public boolean delete(Long id) {
-
         return employeesDatasource.remove(id) != null;
     }
 
