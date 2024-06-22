@@ -54,3 +54,6 @@ https://medium.com/@theopendle/creating-a-jersey-api-with-spring-boot-87a1af0512
     </executions>
 </plugin>
 ```
+
+## Version de este proyecto desarrollado en Jakarta Enterprise Edition
+[Proyecto JEE](https://github.com/Berliss/prueba-tecnica-claro-jee)
